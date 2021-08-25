@@ -4,9 +4,8 @@
   "description": "",
   "main": "dist/index",
   "scripts": {
-    "app:start": "node -r dotenv/config ./dist/",
-    "app:start:dev": "node -r dotenv/config --inspect=0.0.0.0:9228 ./dist/",
-    "start": "rimraf dist && npm run lint && copyfiles -e src/email-templates/*.ts -f src/email-templates/*.* dist/email-templates/  && tsc-watch --outDir ./dist --onSuccess \"npm run start:dev\" --onFailure \"'echo Compilation Failed'\"",
+    "start:dev": "node -r dotenv/config --inspect=0.0.0.0:9227 ./dist/",
+    "start": "rimraf dist && npm run lint && copyfiles -e src/email-templates/*.ts -f src/email-templates/*.* dist/email-templates/ && tsc-watch --outDir ./dist --onSuccess \"npm run start:dev\" --onFailure \"'echo Compilation Failed'\"",
     "build": "rimraf dist && tsc",
     "tsc": "rimraf dist && npm run lint && tsc --watch",
     "lint": "eslint --fix --ext .ts,.js src"
@@ -14,7 +13,7 @@
   "dependencies": {
     "express": "4.17.1",
     "nodemailer": "6.4.8",
-    "mongoose": "5.9.18",
+    "mongoose": "^6.0.0",
     "dotenv": "8.2.0",
     "helmet": "3.23.0",
     "joi": "14.3.1",
@@ -28,7 +27,7 @@
     "@types/express-rate-limit": "5.0.0",
     "@types/helmet": "0.0.47",
     "@types/nodemailer": "6.4.0",
-    "@types/mongoose": "5.7.24",
+    "@types/mongoose": "^5.11.97",
     "@types/morgan": "1.9.1",
     "@types/joi": "14.3.4",
     "@types/jsonwebtoken": "8.5.0",
