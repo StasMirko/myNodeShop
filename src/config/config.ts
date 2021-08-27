@@ -26,7 +26,7 @@ export const config = {
     maxRequests: 1000
   },
 
-  MONGODB_URL: process.env.MONGODB_URL || 'mongodb://localhost/my_shop',
+  MONGODB_URL: process.env.MONGODB_URL || 'mongodb://localhost:27017/my_shop',
 
   ROOT_EMAIL: process.env.ROOT_EMAIL || 'mail',
   ROOT_EMAIL_PASSWORD: process.env.ROOT_EMAIL_PASSWORD || 'password',

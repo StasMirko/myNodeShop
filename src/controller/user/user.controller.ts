@@ -6,6 +6,8 @@ class UserController {
     const user = req.body;
 
     await userService.createUser(user);
+
+    res.sendStatus(201);
   }
 }
 
